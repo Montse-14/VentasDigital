@@ -1,0 +1,106 @@
+vista
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <?php echo $data['tag_page']; ?></title>
+</head>
+
+<body>
+    <?php
+    //  print_r("<pre>");
+    dep($data);
+    // print_r("</pre>");
+    ?>
+    <h1> <?php echo $data['page_title']; ?></h1>
+
+
+
+
+    <?php echo base_url(); ?>
+    <?php echo passwordGenerator(); ?>
+    <?php echo token(); ?>
+    <?php echo  SMONEY.formatMoney(3874747474); ?>
+    
+    
+    
+</body>
+
+</html>
+
+
+
+
+
+controlador 
+
+
+
+
+ public function insertar()
+    {
+        $data=$this->model->setUser('Angel','Atonatl Tlach',2228275887,'monts9','2022-01-16 06:48:23.000000');
+        print_r($data);
+    }
+
+    public function verusuario($id)
+    {
+        $data=$this->model->getUser($id);
+        print_r($data);
+    }
+    public function actualizar(){
+        $data = $this->model->updateUser(2,'Angell', 'Atonatl Tachi');
+        print_r($data);
+    }
+    public function verusuarios(){
+        $data = $this->model->getUsers();
+        print_r($data);
+    }
+    public function eliminarUsuario($id){
+        $data = $this->model->delUser($id);
+        print_r($data);
+    }
+  
+
+modelo
+
+
+
+ public function setUser(string $nombre, string $apellidos, string $telefono, string $password , string $date)
+    {
+        $query_insert="INSERT INTO clientes(nombre,apellidos,telefono,password,fecha_registro) VALUES(?,?,?,?,?)";
+        $arrData=array($nombre,$apellidos,$telefono,$password,$date);
+        $request_insert=$this->insert($query_insert,$arrData);
+        return $request_insert;
+    }
+    public function getUser($id){
+        $sql = "SELECT * FROM clientes where id_cliente = $id";
+        $request = $this->select($sql);
+        return $request;
+    }
+
+    public function updateUser(int $id, string $nombre, string $apellidos )
+    {
+        $sql = "UPDATE clientes SET nombre = ?, apellidos = ? where id_cliente = $id";
+        $arrData = array($nombre, $apellidos);
+        $request = $this->update($sql, $arrData);
+        return $request;
+    }
+    public function getusers(){
+        $sql = "SELECT * FROM usuarios";
+        $request = $this->select_all($sql);
+        return $request;;
+    }
+    public function delUser(int $id){
+        $sql = "DELETE FROM usuarios where id_usuario= $id ";
+        $request = $this->select_all($sql);
+        return $request;
+        // $delete = $this->cone
+    }
+
+
+
