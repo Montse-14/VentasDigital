@@ -130,7 +130,7 @@ function fntNombresClientes() {
 function fntViewVentas(idventa) {
     var idventa = idventa;
     var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-    var ajaxUrl = base_url + '/Ventas/getVenta/' + idventa;
+    var ajaxUrl = base_url + '/Ventas/getventaaa/' + idventa;
     request.open("GET", ajaxUrl, true);
     request.send();
     request.onreadystatechange = function() {
@@ -142,14 +142,13 @@ function fntViewVentas(idventa) {
                     '<span class="badge badge-success">Activo</span>' :
                     '<span class="badge badge-danger">Inactivo</span>';
 
+                    //$('#celNombre').val(objData.data.nombre)
                 document.querySelector("#celNombre").innerHTML = objData.data.nombre;
                 document.querySelector("#celConcepto").innerHTML = objData.data.concepto;
                 document.querySelector("#celDescripcion").innerHTML = objData.data.descripcion;
                 document.querySelector("#celSub").innerHTML = objData.data.subtotal;
-
                 document.querySelector("#celIva").innerHTML = objData.data.iva;
                 document.querySelector("#celTotal").innerHTML = objData.data.total;
-
                 document.querySelector("#celFecha").innerHTML = objData.data.fecha_registro;
                 document.querySelector("#celEstado").innerHTML = estadoUsuario;
                 // document.querySelector("#celEstado").innerHTML = estadoUsuario;
@@ -181,8 +180,6 @@ function fntEditVenta(id_venta) {
             //console.log('Subtotal: ' + objData.data.subtotal);
             //console.log('Iva: ' + objData.data.iva);
             //console.log('Total: ' + objData.data.total);
-
-  
  
             if (objData.status) {
               $('#idventa').val(objData.data.id_venta)

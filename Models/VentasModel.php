@@ -82,6 +82,18 @@ class VentasModel extends Mysql
         $request = $this->select($sql);
         return $request;
     }
+    public function selectventaa(int $idventa)
+    {
+        $this->intcliente = $idventa;
+        $sql = "SELECT V.id_venta ,C.nombre, V.concepto, V.descripcion, V.subtotal, V.iva,V.total,V.fecha_registro, V.estatus
+        FROM ventas v
+        INNER JOIN clientes c on c.id_cliente = v.id_cliente
+        WHERE v.id_venta = $this->intcliente";
+
+
+        $request = $this->select($sql);
+        return $request;
+    }
 
 
 

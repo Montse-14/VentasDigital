@@ -31,8 +31,14 @@
     <link href="<?= media(); ?>/vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="<?= media(); ?>/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
     <link href="<?= media(); ?>/vendor/vector-map/jqvmap.min.css" rel="stylesheet" media="all">
+    <!-- datepicker-->
+    <link rel="stylesheet" type="text/css" href="<?= media();?>/js/datepicker/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="<?= media();?>/js/datepicker/jquery-ui.min.css">
+    
     <link rel="stylesheet" type="text/css" href="<?= media();?>/css/main.css">
     <link rel="stylesheet" type="text/css" href="<?= media();?>/css/style.css">
+    
+    
     <!-- Main CSS-->
     
     <link rel="stylesheet"  type="text/css" href="<?= media(); ?>/css/theme.css">

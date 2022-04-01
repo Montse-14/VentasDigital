@@ -29,7 +29,8 @@
 				$fechaVenta = date_format($date,"Y-m-d");
 				$sql = "SELECT DAY(fecha_registro) AS dia, COUNT(id_venta) AS cantidad, SUM(total) AS Total 
 						FROM ventas 
-						WHERE DATE(fecha_registro) = '$fechaVenta' AND estatus = '1' ";
+						WHERE DATE(fecha_registro) = '$fechaVenta' 
+						AND estatus = '1' ";
 				$ventaDia = $this->select($sql);
 				$ventaDia['dia'] = $n_dia;
 				$ventaDia['Total'] = $ventaDia['Total'] == "" ? 0 : $ventaDia['Total'];

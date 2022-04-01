@@ -81,12 +81,23 @@ class VentasproductosModel extends Mysql
         // }
         return $request;
     }
+    //ver
     public function selectventaProducto(int $idventapro){
         $this->intventaProducto = $idventapro;
         $sql = "SELECT id_ventapro,nombre,concepto,cantidad,costo_unitario,ventas_productos.total FROM ventas 
         INNER JOIN ventas_productos on ventas.id_venta = ventas_productos.id_venta 
         INNER JOIN productos on productos.id_producto = ventas_productos.id_producto
         WHERE ventas_productos.id_ventapro = $this->intventaProducto";
+                $request = $this->select($sql);
+                return $request;
+    }
+//editar - corrigiendo
+    public function selectventaaProducto(int $idventapro){
+        $this->intventaProducto = $idventapro;
+        $sql = "SELECT nombre,concepto,cantidad,costo_unitario,ventas_productos.total FROM ventas 
+        INNER JOIN ventas_productos on ventas.id_venta = ventas_productos.id_venta 
+        INNER JOIN productos on productos.id_producto = ventas_productos.id_producto
+        WHERE ventas_productos.id_ventapro  = $this->intventaProducto";
                 $request = $this->select($sql);
                 return $request;
     }

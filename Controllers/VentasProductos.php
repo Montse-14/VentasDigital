@@ -75,12 +75,30 @@ class VentasProductos extends Controllers
             }  
         die();
         }
+
         public function getVentaProducto(int $idventapro){
 			
             $idventapro1 = intval($idventapro);
             if($idventapro1 > 0)
             {
-                $arrData = $this->model->selectventaProducto($idventapro1);
+                $arrData = $this->model->selectventaaProducto($idventapro1);
+                if(empty($arrData))
+                {
+                    $arrResponse = array('status' => false, 'msg' => 'Datos no encontrados.');
+                }else{
+                    $arrResponse = array('status' => true, 'data' => $arrData);
+                }
+                echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
+            }
+            die();
+        }
+        //editar
+        public function getVentaProductoo(int $idventapro){
+			
+            $idventapro1 = intval($idventapro);
+            if($idventapro1 > 0)
+            {
+                $arrData = $this->model->selectventaaProducto($idventapro1);
                 if(empty($arrData))
                 {
                     $arrResponse = array('status' => false, 'msg' => 'Datos no encontrados.');

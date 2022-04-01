@@ -58,6 +58,15 @@
         unlink('Assets/img/uploads/'.$name);
     }
 
+    //mandar archivos
+    function getFile(string $url, $data)
+    {
+        ob_start();
+        require_once("Views/{$url}.php");
+        $file = ob_get_clean();
+        return $file;        
+    }
+
 
     function getModal(string $nameModal, $data){
         $view_modal = "Views/Template/Modals/{$nameModal}.php";

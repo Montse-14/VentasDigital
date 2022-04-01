@@ -21,10 +21,26 @@
             //dep($data['ventasMDia']);exit;
            
 
-			$this->views->getView($this,"reportes", $data);	
+        $this->views->getView($this,"reportes", $data);	
             
         }
 
+        public function ventasMes(){
+			if($_POST){
+                //dep($_POST);
+
+				$grafica = "ventasMes";
+				$nFecha = str_replace(" ","",$_POST['fecha']);
+				$arrFecha = explode('-',$nFecha);
+				$mes = $arrFecha[0];
+				$anio = $arrFecha[1];
+				$pagos = $this->model->selectVentasMes($anio,$mes);
+				$script = getFile("Template/Modals/graficas",$pagos);
+				echo $script;
+				die();
+			}
+		}
         
 		
     }
+?>    

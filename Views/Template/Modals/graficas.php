@@ -1,6 +1,8 @@
 <?php 
 	if($grafica = "ventasMes"){
 		$ventasMes = $data;
+		//dep($ventasMes)exit;
+
  ?>
 <script>
 	  Highcharts.chart('graficaMes', {

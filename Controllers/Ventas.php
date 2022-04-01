@@ -116,13 +116,30 @@ class Ventas extends Controllers
         die();
     }
 
-    // select una venta
+    // select una venta(modal ver)
     public function getventa(int $idventa){
 			
         $idventa1 = intval($idventa);
         if($idventa1 > 0)
         {
             $arrData = $this->model->selectventa($idventa1);
+            if(empty($arrData))
+            {
+                $arrResponse = array('status' => false, 'msg' => 'Datos no encontrados.');
+            }else{
+                $arrResponse = array('status' => true, 'data' => $arrData);
+            }
+            echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
+        }
+        die();
+    }
+    // select una venta (update)
+    public function getventaaa(int $idventa){
+			
+        $idventa1 = intval($idventa);
+        if($idventa1 > 0)
+        {
+            $arrData = $this->model->selectventaa($idventa1);
             if(empty($arrData))
             {
                 $arrResponse = array('status' => false, 'msg' => 'Datos no encontrados.');

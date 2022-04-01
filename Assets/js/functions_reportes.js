@@ -14,6 +14,7 @@ $('.date-picker').datepicker( {
         $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
     }
 });
+
 function fntSearchVMes(){
     let fecha = document.querySelector(".ventasMes").value;
     if(fecha == ""){
@@ -23,10 +24,10 @@ function fntSearchVMes(){
         let request = (window.XMLHttpRequest) ? 
             new XMLHttpRequest() : 
             new ActiveXObject('Microsoft.XMLHTTP');
-        let ajaxUrl = base_url+'/Reportes/ventasMes';
+        let ajaxUrl = base_url + '/Reportes/ventasMes';
         divLoading.style.display = "flex";
         let formData = new FormData();
-        formData.append('fecha_registro',fecha);
+        formData.append('fecha',fecha);
         request.open("POST",ajaxUrl,true);
         request.send(formData);
         request.onreadystatechange = function(){
