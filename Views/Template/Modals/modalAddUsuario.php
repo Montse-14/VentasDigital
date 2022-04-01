@@ -1,73 +1,79 @@
 <div class="modal fade" id="modalformadduser" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <!-- <div class="main-content">-->
-                <div class="section__content section__content--p40">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="card">
-                                    <div class="card-header">Formulario nuevo usuario</div>
-                                    <div class="card-body">
-                                        <div class="card-title">
-                                            <h3 class="text-center title-2" id="titleModalUsuario" >Agregar nuevo usuario</h3>
-                                        </div>
-                                        <hr>
-                                        <form id="formAdduser" name="formAdduser">
-                                            <input id="idusuario" name="idusuario" type="hidden" class="form-control"  value="">
-                                            <div class="form-group">
-                                                <label for="txtnombreu" class="control-label mb-1">Nombre(s)<span class="text-danger"> *</span></label>
-                                                <input id="txtnombreu" name="txtnombreu" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Ingrese su nombre(s)" value="">
-                                            </div>
-                                            <div class="form-group has-success">
-                                                <label for="txtapellidosu" class="control-label mb-1">Apellidos<span class="text-danger"> *</span></label>
-                                                <input id="txtapellidosu" name="txtapellidosu" type="text" class="form-control cc-name valid" data-val="true" placeholder="Ingresar apellidos">
-                                                <!-- <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span> -->
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="txtcorreou" class="control-label mb-1">Correo electronico<span class="text-danger"> *</span></label>
-                                                <input id="txtcorreou" name="txtcorreou" type="email" class="form-control " value="" placeholder="Ingrese un correo valido">
-
-                                            </div>
-                                            <div class="row">
-                                                
-                                                <div class="col-6">
-                                                    <label for="txtpassword" class="control-label mb-1">password<span class="text-danger"> *</span></label>
-                                                    <div class="input-group">
-                                                        <input id="txtpassword" name="txtpassword" type="password" class="form-control cc-cvc" value="" autocomplete="off">
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="selecttipou" class="control-label mb-1">Tipo</label>
-
-                                                <select name="selecttipou" id="selecttipou" class="form-control">
-                                                    <option value="1">Administrador</option>
-                                                    <option value="2">Asistente</option>
-
-                                                </select>
-                                            </div>
-                                            <div>
-                                                <button id="btnactionguardarU" type="submit" class="btn btn-lg btn-info btn-block">
-                                                    <!-- <i class="fa fa-lock fa-lg"></i>&nbsp; -->
-                                                    <!-- <span id="payment-button-amount">Pay $100.00</span> -->
-                                                    <span id="btntext">Guardar Usuario</span>
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--</div> -->
-            </div>
-        </div>
-    </div>
+ <div class="modal-dialog modal-lg">
+   <div class="modal-content">
+     <div class="modal-header">
+       <div style="color:black" class="mx-auto">
+         Formulario nuevo usuario
+       </div>
+     </div>
+     <br>
+     <h3 style="color:black" class="text-center title-2" id="titleModalUsuario">Agregar nuevo usuario</h3>
+     <br>
+ 
+     <div class="container">
+       <form id="formAdduser" name="formAdduser">
+         <input id="idusuario" name="idusuario" type="hidden" class="form-control" value="">
+ 
+         <div class="row">
+           <div class="col-6">
+             <div class="form-group">
+               <label style="color:black" for="txtnombreu" class="control-label mb-1">Nombre(s)<span class="text-danger"> *</span></label>
+               <input style="color:black" id="txtnombreu" name="txtnombreu" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Ingrese su nombre(s)" value="">
+             </div>
+           </div>
+           <div class="col-6">
+             <div class="form-group">
+               <label style="color:black" for="txtapellidosu" class="control-label mb-1">Apellidos<span class="text-danger"> *</span></label>
+               <input style="color:black" id="txtapellidosu" name="txtapellidosu" type="text" class="form-control cc-name valid" data-val="true" placeholder="Ingresar apellidos">
+             </div>
+           </div>
+           <div class="col-6">
+             <div class="form-group">
+               <label style="color:black" for="txtcorreou" class="control-label mb-1">Correo electronico<span class="text-danger"> *</span></label>
+               <input style="color:black" id="txtcorreou" name="txtcorreou" type="email" class="form-control " value="" placeholder="Ingrese un correo valido">
+             </div>
+           </div>
+           <div class="col-6">
+             <div class="form-group">
+               <label style="color:black" for="txtpassword" class="control-label mb-1">password<span class="text-danger"> *</span></label>
+               <div class="input-group">
+                 <input style="color:black" id="txtpassword" name="txtpassword" type="password" class="form-control cc-cvc" value="" autocomplete="off">
+               </div>
+             </div>
+           </div>
+           <div class="col-6">
+             <div class="form-group">
+               <label style="color:black" for="selecttipou" class="control-label mb-1">Tipo</label>
+ 
+               <select style="color:black" name="selecttipou" id="selecttipou" class="form-control">
+                 <option value="1">Administrador</option>
+                 <option value="2">Asistente</option>
+ 
+               </select>
+             </div>
+           </div>
+           <div class="col-6">
+             <div class="form-group">
+               <br>
+               <button id="btnactionguardarU" type="submit" class="btn btn-info ">
+                 <!-- <i class="fa fa-lock fa-lg"></i>&nbsp; -->
+                 <!-- <span id="payment-button-amount">Pay $100.00</span> -->
+                 <span id="btntext">Guardar Usuario</span>
+               </button>
+             </div>
+           </div>
+         </div>
+ 
+       </form>
+     </div>
+ 
+    
+ 
+ 
+   </div>
+ </div>
 </div>
+
 
 
 

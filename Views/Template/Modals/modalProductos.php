@@ -3,76 +3,63 @@ ini_set('date.timezone', 'America/Mexico_City');
 $date = date('Y-m-d H:i:s');
 ?>
 <div class="modal fade" id="modalformaddProductos" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <!-- <div class="main-content">-->
-        <div class="section__content section__content--p40">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="card">
-                  <div class="card-header">Formulario Productos</div>
-                  <div class="card-body">
-                    <div class="card-title">
-                      <h3 class="text-center title-2" id="titlemodalProductos">Agregar Producto</h3>
-                    </div>
-                    <hr>
-                    <form id="formAddProductos" name="formAddProductos">
-                      <input id="idProd" name="idProd" type="hidden" class="form-control" value="">
-                      <div class="form-group">
-                      <label for="txtNombre" class=" control-label mb-1">Nombre<span class="text-danger"> *</span></label>
-                        <input id="txtNombre" name="txtNombre" type="text" class="form-control" data-val="true" placeholder="Ingresar nombre">                    
-
-                        </select>
-                      </div>
-                      <div class="form-group has-success">
-                        <label for="txtPrecio" class=" control-label mb-1">Precio<span class="text-danger"> *</span></label>
-                        <input id="txtPrecio" name="txtPrecio" type="text" class="form-control" data-val="true" placeholder="Ingresar precio">
-                        <!-- <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span> -->
-                      </div>
-                      <div class="form-group">
-                        <label for="txtdescripcion" class="control-label mb-1">Descripcion<span class="text-danger"> *</span></label>
-                        <input id="txtdescripcion" name="txtdescripcion" type="text" class="form-control " value="" placeholder="Ingrese descripcion">
-
-                      </div>
-                      <div class="row">
-                        <div class="col-6">
-                          <div class="form-group">
-                            
-                          </div>
-                        </div>
-                        
-                        </div>
-                      </div>
-                      <!-- <div class="form-group">
-                                                <label for="selecttipou" class="control-label mb-1">Tipo</label>
-
-                                                <select name="selecttipou" id="selecttipou" class="form-control">
-                                                    <option value="1">Administrador</option>
-                                                    <option value="2">Asistente</option>
-
-                                                </select>
-                                            </div> -->
-                      <div>
-                        <button id="btnactionguardarProd" type="submit" class="btn btn-lg btn-info btn-block">
-                          <!-- <i class="fa fa-lock fa-lg"></i>&nbsp; -->
-                          <!-- <span id="payment-button-amount">Pay $100.00</span> -->
-                          <span id="btntext">Guardar Producto</span>
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--</div> -->
-      </div>
-    </div>
-  </div>
+ <div class="modal-dialog modal-lg">
+   <div class="modal-content">
+     <div class="modal-header">
+       <div style="color:black" class="mx-auto">
+         Formulario Productos
+       </div>
+     </div>
+     <br>
+     <div style="color:black" class="mx-auto">
+       <h3 style="color:black" class="text-center title-2" id="titlemodalProductos">Agregar Producto</h3>
+     </div>
+     <br>
+     <div class="container">
+       <form id="formAddProductos" name="formAddProductos">
+         <input id="idProd" name="idProd" type="hidden" class="form-control" value="">
+         <div class="row">
+           <div class="col-6">
+             <div class="form-group">
+               <label style="color:black" for="txtNombre" class=" control-label mb-1">Nombre<span class="text-danger"> *</span></label>
+               <input style="color:black" id="txtNombre" name="txtNombre" type="text" class="form-control" data-val="true" placeholder="Ingresar nombre">
+             </div>
+           </div>
+           <div class="col-6">
+             <div class="form-group">
+               <label style="color:black" for="txtPrecio" class=" control-label mb-1">Precio<span class="text-danger"> *</span></label>
+               <input style="color:black" id="txtPrecio" name="txtPrecio" type="text" class="form-control" data-val="true" placeholder="Ingresar precio">
+             </div>
+           </div>
+           <div class="col-6">
+             <div class="form-group">
+               <label style="color:black" for="txtdescripcion" class="control-label mb-1">Descripcion<span class="text-danger"> *</span></label>
+               <input style="color:black" id="txtdescripcion" name="txtdescripcion" type="text" class="form-control " value="" placeholder="Ingrese descripcion">
+             </div>
+           </div>
+           <div class="col-6">
+             <div class="form-group">
+               <br>
+               <button id="btnactionguardarProd" type="submit" class="btn  btn-info btn-block">
+                 <!-- <i class="fa fa-lock fa-lg"></i>&nbsp; -->
+                 <!-- <span id="payment-button-amount">Pay $100.00</span> -->
+                 <span id="btntext">Guardar Producto</span>
+               </button>
+             </div>
+           </div>
+         </div>
+       </form>
+     </div>
+ 
+ 
+    
+   </div>
+ </div>
 </div>
+ 
+
+ 
+
 
 
 

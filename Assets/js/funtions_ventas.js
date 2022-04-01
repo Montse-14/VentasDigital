@@ -178,17 +178,32 @@ function fntEditVenta(id_venta) {
 
         if (request.readyState == 4 && request.status == 200) {
             var objData = JSON.parse(request.responseText);
+            //console.log('Subtotal: ' + objData.data.subtotal);
+            //console.log('Iva: ' + objData.data.iva);
+            //console.log('Total: ' + objData.data.total);
 
+  
+ 
             if (objData.status) {
-                document.querySelector("#idventa").value = objData.data.id_venta;
-                document.querySelector("#listidcliente").value = objData.data.id_cliente;
-                document.querySelector("#txtconcepto").value = objData.data.concepto;
-                document.querySelector("#txtdescripcion").value = objData.data.descripcion;
-                document.querySelector("#txtsubto").value = objData.data.subtotal;
-                document.querySelector("#txtIva").value = objData.data.subtotal;
-                document.querySelector("#txtTotal").value = objData.data.subtotal;
+              $('#idventa').val(objData.data.id_venta)
+               $('#listidcliente').val(objData.data.id_cliente)
+               $('#txtconcepto').val(objData.data.concepto)
+               $('#txtdescripcion').val(objData.data.descripcion)
+               $('#txtsubto').val(objData.data.subtotal)
+               $('#txtIva').val(objData.data.iva)
+               $('#txtTotal').val(objData.data.total)
+               $('#txtfecha').val(objData.data.fecha_registro)
+ 
 
-                document.querySelector("#txtfecha").value = objData.data.fecha_registro;
+                //document.querySelector("#idventa").value = objData.data.id_venta;
+                //document.querySelector("#listidcliente").value = objData.data.id_cliente;
+                //document.querySelector("#txtconcepto").value = objData.data.concepto;
+                //document.querySelector("#txtdescripcion").value = objData.data.descripcion;
+                //document.querySelector("#txtsubto").value = objData.data.subtotal;
+                //document.querySelector("#txtIva").value = objData.data.subtotal;
+                //document.querySelector("#txtTotal").value = objData.data.subtotal;
+
+                //document.querySelector("#txtfecha").value = objData.data.fecha_registro;
                 // document.querySelector("#listRolid").value = objData.data.idrol;
 
 

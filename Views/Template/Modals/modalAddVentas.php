@@ -3,101 +3,93 @@ ini_set('date.timezone', 'America/Mexico_City');
 $date = date('Y-m-d H:i:s');
 ?>
 <div class="modal fade" id="modalformaddVentas" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <!-- <div class="main-content">-->
-        <div class="section__content section__content--p40">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="card">
-                  <div class="card-header">Formulario ventas</div>
-                  <div class="card-body">
-                    <div class="card-title">
-                      <h3 class="text-center title-2" id="titlemodalventas">Asignar ventas</h3>
-                    </div>
-                    <hr>
-                    <form id="formAddventas" name="formAddventas">
-                      <input id="idventa" name="idventa" type="hidden" class="form-control" value="">
-                      <div class="form-group">
-                        <label for="listidcliente" class="control-label mb-1">Nombre(s)<span class="text-danger"> *</span></label>
-                        <select class="form-control" data-live-search="true" id="listidcliente" name="listidcliente" required>
-
-                        </select>
-                      </div>
-                      <div class="form-group has-success">
-                        <label for="txtconcepto" class=" control-label mb-1">Concepto<span class="text-danger"> *</span></label>
-                        <input id="txtconcepto" name="txtconcepto" type="text" class="form-control" data-val="true" placeholder="Ingresar concepto">
-                        <!-- <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span> -->
-                      </div>
-                      <div class="form-group">
-                        <label for="txtdescripcion" class="control-label mb-1">Descripcion<span class="text-danger"> *</span></label>
-                        <input id="txtdescripcion" name="txtdescripcion" type="text" class="form-control " value="" placeholder="Ingrese descripcion">
-
-                      </div>
-                      <div class="row">
-                        <div class="col-6">
-                          <div class="form-group">
-                            <label for="txtsubto" class="control-label mb-1">Subtotal<span class="text-danger"> *</span></label>
-                            <input id="txtsubto" name="txtsubto" type="text" class="form-control" value="" placeholder="Ingrese el subtotal $$"  onkeyup="calculo();">   <!-- o podemos usar onChange/*-->
-
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <label for="txtpassword" class="control-label mb-1">IVA<span class="text-danger"> *</span></label>
-                          <div class="input-group">
-                            <input id="txtIva" name="txtIva" type="text" class="form-control cc-cvc"  autocomplete="off" placeholder="IVA" readonly>
-
-                          </div>
-                        </div>
-                      </div>
-
-
-                      <div class="row">
-                        <div class="col-6">
-                          <div class="form-group">
-                            <label for="txtsubto" class="control-label mb-1">Total<span class="text-danger"> *</span></label>
-                            <input id="txtTotal" name="txtTotal" type="text" class="form-control" value="" placeholder="Total" readonly>
-
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <label for="txtpassword" class="control-label mb-1">Fecha<span class="text-danger"> *</span></label>
-                          <div class="input-group">
-                            <input id="txtfecha" name="txtfecha" type="text" class="form-control cc-cvc" value="<?php echo $date ?>" autocomplete="off" readonly>
-
-                          </div>
-                        </div>
-                      </div>
-                      <!-- <div class="form-group">
-                                                <label for="selecttipou" class="control-label mb-1">Tipo</label>
-
-                                                <select name="selecttipou" id="selecttipou" class="form-control">
-                                                    <option value="1">Administrador</option>
-                                                    <option value="2">Asistente</option>
-
-                                                </select>
-                                            </div> -->
-                      <div>
-                        <button id="btnactionguardarV" type="submit" class="btn btn-lg btn-info btn-block">
-                          <!-- <i class="fa fa-lock fa-lg"></i>&nbsp; -->
-                          <!-- <span id="payment-button-amount">Pay $100.00</span> -->
-                          <span id="btntext">Guardar Venta</span>
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--</div> -->
-      </div>
-    </div>
-  </div>
+ <div class="modal-dialog modal-lg">
+   <div class="modal-content">
+     <div class="modal-header">
+       <div class="mx-auto">
+         <h4 style="color: black;">Formulario de Ventas</h4>
+       </div>
+     </div>
+     <br>
+     <h3 style="color:black" class="text-center title-2" id="titlemodalventas">Asignar ventas</h3>
+     <br>
+     <div class="container">
+ 
+       <form id="formAddventas" name="formAddventas">
+         <input id="idventa" name="idventa" type="hidden" class="form-control" value="">
+         <div class="row">
+           <div class="col-6">
+             <div class="form-group">
+               <label style="color:black;" for="listidcliente" class="control-label mb-1">Nombre(s)<span class="text-danger"> *</span></label>
+               <select style="color:black" class="form-control" data-live-search="true" id="listidcliente" name="listidcliente" required>
+               </select>
+             </div>
+           </div>
+           <div class="col-6">
+             <div class="form-group">
+               <label style="color:black;" for="txtconcepto" class=" control-label mb-1">Concepto<span class="text-danger"> *</span></label>
+               <input style="color:black" id="txtconcepto" name="txtconcepto" type="text" class="form-control" data-val="true" placeholder="Ingresar concepto">
+               <!-- <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span> -->
+             </div>
+           </div>
+ 
+           <div class="col-6">
+             <div class="form-group">
+               <label style="color:black;" for="txtdescripcion" class="control-label mb-1">Descripcion<span class="text-danger"> *</span></label>
+               <input style="color:black" id="txtdescripcion" name="txtdescripcion" type="text" class="form-control " value="" placeholder="Ingrese descripcion">
+             </div>
+           </div>
+           <div class="col-6">
+             <div class="form-group">
+               <label style="color:black;" class="control-label mb-1">Subtotal<span class="text-danger"> *</span></label>
+               <input style="color:black" id="txtsubto" name="txtsubto" type="text" class="form-control" value="" placeholder="Ingrese el subtotal $$" onkeyup="calculo();"> <!-- o podemos usar onChange/*-->
+ 
+             </div>
+           </div>
+           <div class="col-6">
+             <div class="form-group">
+               <label style="color:black;" class="control-label mb-1">IVA<span class="text-danger"> *</span></label>
+               <div class="input-group">
+                 <input style="color:black" id="txtIva" name="txtIva" type="text" class="form-control cc-cvc" autocomplete="off" placeholder="IVA" readonly>
+               </div>
+             </div>
+           </div>
+           <div class="col-6">
+             <div class="form-group">
+               <label style="color:black;" class="control-label mb-1">Total<span class="text-danger"> *</span></label>
+               <input style="color:black" id="txtTotal" name="txtTotal" type="text" class="form-control" value="" placeholder="Total" readonly>
+              
+             </div>
+           </div>
+           <div class="col-6">
+             <div class="form-group">
+               <label style="color:black;" class="control-label mb-1">Fecha<span class="text-danger"> *</span></label>
+               <div class="input-group">
+                 <input style="color:black" id="txtfecha" name="txtfecha" type="text" class="form-control cc-cvc" value="<?php echo $date ?>" autocomplete="off" readonly>
+               </div>
+             </div>
+           </div>
+           <div class="col-6">
+             <br>
+             <button id="btnactionguardarV" type="submit" class="btn btn-info ">
+               <!-- <i class="fa fa-lock fa-lg"></i>&nbsp; -->
+               <!-- <span id="payment-button-amount">Pay $100.00</span> -->
+               <span id="btntext">Guardar Venta</span>
+             </button>
+             <br>
+           </div>
+         </div>
+       </form>
+     </div>
+   </div>
+ </div>
 </div>
+ 
+ 
+ 
+
+ 
+
 
 
 
