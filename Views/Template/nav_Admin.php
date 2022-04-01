@@ -23,7 +23,7 @@
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fa fa-users"></i>Lista usuarios
+                                <i class="fa fa-user-plus"></i>Lista usuarios
                                 <span class="arrow">
                                     <i class="fas fa-angle-down"></i>
                                 </span>
@@ -31,7 +31,7 @@
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
                                     <a href="<?= base_url(); ?>/usuarios">
-                                        <i class="fas fa-tachometer-alt"></i>Usuarios</a>
+                                        <i class="	fa fa-users"></i>Usuarios</a>
                                 </li>
                                 <li>
                                     <a href="<?= base_url(); ?>/clientes">
@@ -53,7 +53,7 @@
                         </li>
                         <li>
                             <a href="<?= base_url(); ?>/ventas">
-                                <i class="fas fa-chart-bar"></i>Ventas</a>
+                                <i class="fa fa-usd"></i>Ventas</a>
 
                         </li>
                         <li>
@@ -67,7 +67,11 @@
                         </li>
                         <li>
                             <a href="<?= base_url(); ?>/ventasproductos">
-                                <i class="fa fa-line-chart"></i>Ventas de productos</a>
+                                <i class="fa fa-calculator"></i>Ventas de productos</a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url(); ?>/reportes">
+                                <i class="fa fa-pie-chart"></i>Reporte de Ventas</a>
                         </li>
 
 

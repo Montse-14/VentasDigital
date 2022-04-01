@@ -126,7 +126,7 @@ function fntNombresClientes() {
 }
 
 
-//ver modal tabal --> boton ver venta
+//ver modal tabla --> boton ver venta
 function fntViewVentas(idventa) {
     var idventa = idventa;
     var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');

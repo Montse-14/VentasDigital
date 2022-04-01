@@ -21,6 +21,11 @@
     <script src="<?=  media(); ?>/vendor/vector-map/jquery.vmap.sampledata.js"></script>
     <script src="<?=  media(); ?>/vendor/vector-map/jquery.vmap.world.js"></script>
 
+    <!-- graficas= --> 
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
 
     <script type="text/javascript" src="<?= media(); ?>/js/plugins/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="<?= media(); ?>/js/plugins/dataTables.bootstrap.min.js"></script>
@@ -39,6 +44,7 @@
     <script type="text/javascript" src="<?=  media(); ?>/js/main.min.js"></script>
     <script type="text/javascript" src="<?=  media(); ?>/js/moment.js"></script>
     <script type="text/javascript" src="<?=  media(); ?>/js/es.js"></script>
+    
     <!-- Usuarios= -->
     <?php if ($data['page_name']=="usuarios"){ ?> 
         <script src="<?=  media();?>/js/functions_usuarios.js"></script>
@@ -59,6 +65,9 @@
     <?php } ?>
     <?php if ($data['page_name']=="ventasproductos"){ ?> 
         <script src="<?=  media();?>/js/funtions_productosventas.js"></script>
+    <?php } ?>
+    <?php if ($data['page_name']=="reportes"){ ?> 
+        <script src="<?=  media();?>/js/functions_reportes.js"></script>
     <?php } ?>
 </body>
 
